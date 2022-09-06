@@ -1,0 +1,851 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.activities.pickuprequest.PickUpRequestFormActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/my_appbar_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar_main"
+                android:visibility="visible" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/my_appbar_container"
+            tools:context=".ui.activities.hyperlocal.HyperLocalFormActivity">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cvHyperLocalDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/size_8dp"
+                    app:cardCornerRadius="@dimen/size_4dp"
+                    app:cardElevation="@dimen/size_2dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/size_10dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_title_docket_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="Hyper Local Request"
+                            android:textAppearance="@style/TextStyleSemiBold"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="@dimen/text_18sp"
+                            tools:ignore="HardcodedText" />
+
+                        <View
+                            android:id="@+id/view_separator_docket_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/separator_height"
+                            android:layout_below="@+id/tv_title_docket_details"
+                            android:layout_marginTop="@dimen/size_8dp"
+                            android:layout_marginBottom="@dimen/size_8dp"
+                            android:background="@color/colorTextDarkGrey" />
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tnlHlrNo"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/view_separator_docket_details">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edtHlrNo"
+                                style="@style/customEditTexthyperlocal"
+                                android:clickable="false"
+                                android:drawableTint="@color/colorTextDark"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:hint="No."
+                                android:longClickable="false"
+                                tools:ignore="HardcodedText,UnusedAttribute" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tnlBookingDate"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tnlHlrNo">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edtBookingDate"
+                                style="@style/customEditTexthyperlocal"
+                                android:clickable="false"
+                                android:drawableEnd="@drawable/ic_calendar_16"
+                                android:drawableTint="@color/colorTextDark"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:hint="Booking Date"
+                                android:longClickable="false"
+                                tools:ignore="HardcodedText,UnusedAttribute" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tnlPaymentType"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tnlBookingDate"
+                            android:layout_marginTop="@dimen/size_8dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edtPaymentType"
+                                style="@style/customEditTexthyperlocal"
+                                 android:clickable="false"
+                                android:drawableEnd="@drawable/ic_arrow_expand_16"
+                                android:drawableTint="@color/colorTextDark"
+                                android:focusable="false"
+                                android:hint="@string/lblSelectPaymentType"
+                                android:longClickable="false"
+                                tools:ignore="UnusedAttribute" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cvPickupDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/size_8dp"
+                    app:cardCornerRadius="@dimen/size_4dp"
+                    app:cardElevation="@dimen/size_2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/size_10dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_pickup_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="Pickup Detail"
+                            android:textAppearance="@style/TextStyleSemiBold"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="@dimen/text_18sp"
+                            tools:ignore="HardcodedText" />
+
+                        <View
+                            android:id="@+id/view_separator_pickup_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/separator_height"
+                            android:layout_marginTop="@dimen/size_8dp"
+                            android:layout_marginBottom="@dimen/size_8dp"
+                            android:background="@color/colorTextDarkGrey" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tnlAddressType"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edtAddressType"
+                                style="@style/customEditTexthyperlocal"
+                                 android:clickable="false"
+                                android:drawableEnd="@drawable/ic_arrow_expand_16"
+                                android:drawableTint="@color/colorTextDark"
+                                android:focusable="false"
+                                android:hint="Select Address Type"
+                                android:longClickable="false"
+                                tools:ignore="HardcodedText,UnusedAttribute" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tnlPostcode"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/size_8dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                style="@style/customEditTexthyperlocal"
+                                  android:hint="@string/lblPostcode"
+                                android:inputType="text" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tnlAddress1"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/size_8dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                style="@style/customEditTexthyperlocal"
+                                android:hint="Address 1"
+                                android:inputType="text"
+                                tools:ignore="HardcodedText" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tnlAddress2"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/size_8dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                style="@style/customEditTexthyperlocal"
+                                android:hint="Address 2"
+                                android:inputType="text"
+                                tools:ignore="HardcodedText" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tnlName"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/size_8dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                style="@style/customEditTexthyperlocal"
+                                android:hint="Name"
+                                android:inputType="textPersonName"
+                                tools:ignore="HardcodedText" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tnlContactNo"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/size_8dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                style="@style/customEditTexthyperlocal"
+                                android:hint="Contact No."
+                                android:inputType="numberSigned"
+                                android:maxLength="15"
+                                tools:ignore="HardcodedText" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cvDeliveryDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/size_8dp"
+                    app:cardCornerRadius="@dimen/size_4dp"
+                    app:cardElevation="@dimen/size_2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/size_10dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_delivery_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="Delivery Detail"
+                            android:textAppearance="@style/TextStyleSemiBold"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="@dimen/text_18sp"
+                            tools:ignore="HardcodedText" />
+
+                        <View
+                            android:id="@+id/view_separator_delivery_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/separator_height"
+                            android:layout_marginTop="@dimen/size_8dp"
+                            android:layout_marginBottom="@dimen/size_8dp"
+                            android:background="@color/colorTextDarkGrey" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tnlDeliveryPostcode"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/size_8dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                style="@style/customEditTexthyperlocal"
+                                android:hint="@string/lblPostcode"
+                                android:inputType="text"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tnlDeliveryAddress1"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/size_8dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                style="@style/customEditTexthyperlocal"
+                                android:hint="Address 1"
+                                android:inputType="text"
+                                tools:ignore="HardcodedText" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tnlDeliveryAddress2"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/size_8dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                style="@style/customEditTexthyperlocal"
+                                 android:hint="Address 2"
+                                android:inputType="text"
+                                tools:ignore="HardcodedText" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tnlDeliveryName"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/size_8dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                style="@style/customEditTexthyperlocal"
+                                android:hint="Name"
+                                android:inputType="textPersonName"
+                                tools:ignore="HardcodedText" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tnlDeliveryContactNo"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/size_8dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                style="@style/customEditTexthyperlocal"
+                                android:hint="Contact No."
+                                android:inputType="numberSigned"
+                                android:maxLength="15"
+                                tools:ignore="HardcodedText" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cvProductDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/size_8dp"
+                    app:cardCornerRadius="@dimen/size_4dp"
+                    app:cardElevation="@dimen/size_2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/size_10dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_product_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="Product Detail"
+                            android:textAppearance="@style/TextStyleSemiBold"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="@dimen/text_18sp"
+                            tools:ignore="HardcodedText" />
+
+                        <View
+                            android:id="@+id/view_separator_product_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/separator_height"
+                            android:layout_marginTop="@dimen/size_8dp"
+                            android:layout_marginBottom="@dimen/size_8dp"
+                            android:background="@color/colorTextDarkGrey" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvDivTitle"
+                            style="@style/TextStyleSemiBold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="What are you sending?"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="@dimen/text_16sp"
+                            tools:ignore="HardcodedText" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/llTtype1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center">
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/cbDocuments"
+                                style="@style/TextStyleNormal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Documents"
+                                tools:ignore="HardcodedText" />
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/cbElectronics"
+                                style="@style/TextStyleNormal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Electronics"
+                                tools:ignore="HardcodedText" />
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/cbMedicine"
+                                style="@style/TextStyleNormal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Medicine"
+                                tools:ignore="HardcodedText" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/llTtype2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start">
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/cbEssentials"
+                                style="@style/TextStyleNormal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Essentials"
+                                tools:ignore="HardcodedText" />
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/cbOthers"
+                                style="@style/TextStyleNormal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/size_40dp"
+                                android:text="Others"
+                                tools:ignore="HardcodedText" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tnlWeight"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/size_8dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edtWeight"
+                                style="@style/TextStyleSemiBold"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clickable="false"
+                                android:drawableEnd="@drawable/ic_arrow_expand_16"
+                                android:focusable="false"
+                                android:hint="Select Weight"
+                                android:longClickable="false"
+                                android:textSize="@dimen/text_14sp"
+                                tools:ignore="HardcodedText" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tnlSpecialInstruction"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/size_8dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                style="@style/TextStyleSemiBold"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/size_70dp"
+                                android:gravity="start|top"
+                                android:hint="Special Instruction"
+                                android:inputType="textImeMultiLine"
+                                android:maxLines="3"
+                                android:textSize="@dimen/text_14sp"
+                                tools:ignore="HardcodedText" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cvProducts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/size_8dp"
+                    app:cardCornerRadius="@dimen/size_4dp"
+                    app:cardElevation="@dimen/size_2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/size_10dp">
+
+                        <RelativeLayout
+                            android:id="@+id/rlProductHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvProducts"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_toStartOf="@+id/btnAdd"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="Products"
+                                android:textAppearance="@style/TextStyleSemiBold"
+                                android:textColor="@color/colorTextPrimary"
+                                android:textSize="@dimen/text_18sp"
+                                tools:ignore="HardcodedText" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnAdd"
+                                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                                android:layout_width="@dimen/size_60dp"
+                                android:layout_height="@dimen/size_28dp"
+                                android:layout_alignParentEnd="true"
+                                android:backgroundTint="#FF5B4E"
+                                android:insetLeft="@dimen/size_0dp"
+                                android:insetTop="@dimen/size_0dp"
+                                android:insetRight="@dimen/size_0dp"
+                                android:insetBottom="@dimen/size_0dp"
+                                android:text="Add"
+                                android:textSize="@dimen/text_12sp"
+                                android:visibility="visible"
+                                app:cornerRadius="@dimen/size_8dp"
+                                tools:ignore="HardcodedText" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/view_separator_products"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/separator_height"
+                            android:layout_marginTop="@dimen/size_8dp"
+                            android:layout_marginBottom="@dimen/size_8dp"
+                            android:background="@color/colorTextDarkGrey" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/size_5dp"
+                            android:paddingEnd="@dimen/size_5dp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvProductName"
+                                style="@style/TextStyleSemiBold"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="5"
+                                android:background="@drawable/table_layout"
+                                android:ellipsize="end"
+                                android:gravity="center_vertical"
+                                android:maxLines="1"
+                                android:text="Product Name"
+                                android:textColor="@color/colorTextPrimary"
+                                android:textSize="@dimen/text_14sp"
+                                tools:ignore="HardcodedText" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvQty"
+                                style="@style/TextStyleSemiBold"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/table_layout"
+                                android:ellipsize="end"
+                                android:gravity="center_vertical|center"
+                                android:maxLines="1"
+                                android:text="Qty."
+                                android:textColor="@color/colorTextPrimary"
+                                android:textSize="@dimen/text_14sp"
+                                tools:ignore="HardcodedText" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvAmount"
+                                style="@style/TextStyleSemiBold"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:background="@drawable/table_layout"
+                                android:ellipsize="end"
+                                android:gravity="center_vertical|center"
+                                android:maxLines="1"
+                                android:text="Amount"
+                                android:textColor="@color/colorTextPrimary"
+                                android:textSize="@dimen/text_14sp"
+                                tools:ignore="HardcodedText" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvAction"
+                                style="@style/TextStyleSemiBold"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/table_layout"
+                                android:ellipsize="end"
+                                android:gravity="center_vertical|center"
+                                android:maxLines="1"
+                                android:text="Delete"
+                                android:textColor="@color/colorTextPrimary"
+                                android:textSize="@dimen/text_14sp"
+                                tools:ignore="HardcodedText" />
+
+                        </LinearLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvProducts"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/size_5dp" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cvPaymentDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/size_8dp"
+                    app:cardCornerRadius="@dimen/size_4dp"
+                    app:cardElevation="@dimen/size_2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/size_10dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvPaymentDetails"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="Payment Detail"
+                            android:textAppearance="@style/TextStyleSemiBold"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="@dimen/text_18sp"
+                            tools:ignore="HardcodedText" />
+
+                        <View
+                            android:id="@+id/view_separator_payment_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/separator_height"
+                            android:layout_marginTop="@dimen/size_8dp"
+                            android:layout_marginBottom="@dimen/size_8dp"
+                            android:background="@color/colorTextDarkGrey" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvTotalQtyTitle"
+                                style="@style/TextStyleSemiBold"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBaseline="@+id/tvTotalQty"
+                                android:layout_alignParentStart="true"
+                                android:layout_toStartOf="@+id/tvTotalQty"
+                                android:text="Total Quantity"
+                                android:textColor="@color/colorTextPrimary"
+                                android:textSize="@dimen/text_15sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvTotalQty"
+                                style="@style/TextStyleBold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginBottom="@dimen/size_2dp"
+                                android:textColor="@color/colorTextPrimary"
+                                android:textSize="@dimen/text_20sp"
+                                tools:text="458" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvTotalAmountTitle"
+                                style="@style/TextStyleSemiBold"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tvTotalQty"
+                                android:layout_alignBaseline="@+id/tvTotalAmount"
+                                android:layout_alignParentStart="true"
+                                android:layout_toStartOf="@+id/tvTotalAmount"
+                                android:text="Total Amount"
+                                android:textColor="@color/colorTextPrimary"
+                                android:textSize="@dimen/text_15sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvTotalAmount"
+                                style="@style/TextStyleBold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tvTotalQty"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginBottom="@dimen/size_2dp"
+                                android:textColor="@color/colorTextPrimary"
+                                android:textSize="@dimen/text_20sp"
+                                tools:text="1254.40" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvFreightTitle"
+                                style="@style/TextStyleSemiBold"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tvTotalAmountTitle"
+                                android:layout_alignBaseline="@+id/tvFreightValue"
+                                android:layout_toStartOf="@+id/tvFreightValue"
+                                android:text="Freight"
+                                android:textColor="@color/colorTextPrimary"
+                                android:textSize="@dimen/text_15sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvFreightValue"
+                                style="@style/TextStyleBold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tvTotalAmount"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginBottom="@dimen/size_2dp"
+                                android:textColor="@color/colorTextPrimary"
+                                android:textSize="@dimen/text_20sp"
+                                tools:text="0.00" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvTotalKMTitle"
+                                style="@style/TextStyleSemiBold"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tvFreightValue"
+                                android:layout_alignBaseline="@+id/tvTotalKMValue"
+                                android:layout_toStartOf="@+id/tvFreightValue"
+                                android:text="Total KM"
+                                android:textColor="@color/colorTextPrimary"
+                                android:textSize="@dimen/text_15sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvTotalKMValue"
+                                style="@style/TextStyleBold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tvFreightValue"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginBottom="@dimen/size_2dp"
+                                android:textColor="@color/colorTextPrimary"
+                                android:textSize="@dimen/text_20sp"
+                                tools:text="0.00" />
+
+                           <!-- <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvDelayPaymentTypeTitle"
+                                style="@style/TextStyleSemiBold"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tvTotalKMValue"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginTop="@dimen/size_10dp"
+                                android:layout_toStartOf="@+id/rgPaymentType"
+                                android:text="Payment Type"
+                                android:textColor="@color/colorTextPrimary"
+                                android:textSize="@dimen/text_15sp" />
+
+                            <RadioGroup
+                                android:id="@+id/rgPaymentType"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tvTotalKMValue"
+                                android:layout_alignParentEnd="true"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.radiobutton.MaterialRadioButton
+                                    android:id="@+id/rbPrepaid"
+                                    style="@style/TextStyleBold"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/size_4dp"
+                                    android:layout_marginEnd="@dimen/size_4dp"
+                                    android:text="Prepaid" />
+
+                                <com.google.android.material.radiobutton.MaterialRadioButton
+                                    android:id="@+id/rbCOD"
+                                    style="@style/TextStyleBold"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/size_4dp"
+                                    android:layout_marginEnd="@dimen/size_4dp"
+                                    android:text="COD" />
+
+                            </RadioGroup>
+-->
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</layout>

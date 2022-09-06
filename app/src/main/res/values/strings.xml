@@ -1,0 +1,155 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">FazTrex Customer</string>
+
+
+    <string name="msg_content_footer" tools:ignore="TypographyDashes">Copyright &#169; 2019-20. All rights reserved by Yiron Technologies (P) Ltd</string>
+
+    <!-- navigation header title start-->
+    <string name="nav_header_title_home">Home</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nav_header_title_docket_booking">Docket Booking</string>
+    <string name="nav_header_title_docket_details">Docket Details</string>
+    <string name="nav_header_title_docket_tracking">Docket Tracking</string>
+    <string name="nav_header_title_postcode_tracking">Postcode Tracking</string>
+    <string name="nav_header_title_drs">Delivery Run Sheet</string>
+    <string name="nav_header_title_drs_details">Delivery Run Sheet Details</string>
+    <string name="nav_header_title_drs_docket_delivery_status">Update Delivery Status</string>
+    <string name="nav_header_title_change_password">Change Password</string>
+    <string name="nav_header_title_request_payment">Request Payment</string>
+    <string name="nav_header_title_payment_details">Payment Details</string>
+    <!-- navigation header title end-->
+
+    <!-- error messages -->
+    <string name="err_msg_api_response_failure">Something went wrong.</string>
+
+    <!-- general messages -->
+    <string name="msg_no_internet">Make sure your device is connected to the Internet.</string>
+    <string name="msg_back_pressed">Press back again to exit</string>
+    <string name="image_description" tools:ignore="DuplicateDefinition">This is image</string>
+
+    <!--    generals text-->
+    <string name="pick_up_form">Pick Up Form</string>
+    <string name="hyper_local_request">Hyper Local Request</string>
+
+    <!--tab_layout_titles-->
+    <string name="pick_up_details">Pick Up Detail</string>
+    <string name="consignee_information">Consignee Information</string>
+    <string name="consignor_information">Consignor Information</string>
+    <string name="product_information">Product Information</string>
+    <string name="dimension_detail">Dimension Detail</string>
+
+    <!-- navigation drawer menu title -->
+    <string name="nav_menu_title_customer">Customer</string>
+    <string name="nav_menu_title_pick_up_request">Pick Up Request</string>
+    <string name="nav_menu_title_docket_booking">Docket Booking</string>
+    <string name="nav_menu_title_docket_tracking">Docket Tracking</string>
+    <string name="nav_menu_title_MIS_report">MIS Report</string>
+    <string name="nav_menu_title_bill">Bill</string>
+    <string name="nav_menu_title_hyper_local_request">Hyper Local Request</string>
+    <string name="nav_menu_title_notification">Notifications</string>
+
+    <string name="default_notification_channel_id">Default Channel</string>
+
+    <!-- shared preference keys -->
+    <string name="pref_is_login" translatable="false">pref_is_login</string>
+    <string name="pref_is_first_login" translatable="false">pref_is_first_login</string>
+    <string name="pref_user_data" translatable="false">pref_user_data</string>
+    
+    <!-- dialog messages -->
+    <string name="dialog_title_authentication_failed">Authentication Failed</string>
+    <string name="dialog_title_sign_out">Sign out?</string>
+    <string name="dialog_msg_sign_out">Are you sure you want to sign out from the application?</string>
+    <string name="dialog_title_confirmation">Confirmation</string>
+    <string name="dialog_msg_dimension_delete_confirmation">Are you sure you want to delete this dimension details?</string>
+    <string name="dialog_msg_docket_delete_confirmation">Are you sure you want to delete this docket?</string>
+    <string name="dialog_msg_payment_delete_confirmation">Are you sure you want to delete this payment details?</string>
+
+    <string name="dialog_title_Delete">Delete</string>
+    <string name="dialog_msg_delete_confirmation">Are you sure you want to delete?</string>
+
+
+    <!-- strings for intent data key -->
+    <string name="key_item_position" translatable="false">key_item_position</string>
+    <string name="key_is_edit" translatable="false">key_is_edit</string>
+    <string name="key_read_only" translatable="false">key_read_only</string>
+    <string name="key_user_id" translatable="false">key_user_id</string>
+    <string name="key_email_address" translatable="false">key_email_address</string>
+    <string name="key_verification_code" translatable="false">key_verification_code</string>
+    <string name="key_docket_id" translatable="false">key_docket_id</string>
+    <string name="key_drs_id" translatable="false">key_drs_id</string>
+    <string name="key_data_drs" translatable="false">key_data_drs</string>
+    <string name="key_data_drs_docket" translatable="false">key_data_drs_docket</string>
+    <string name="key_data_mpesa_request" translatable="false">key_data_mpesa_request</string>
+
+    <!-- button title -->
+    <string name="btn_title_proceed">Proceed</string>
+    <string name="btn_title_cancel">Cancel</string>
+    <string name="btn_title_ok">OK</string>
+    <string name="btn_title_submit">Submit</string>
+    <string name="btn_title_go_to_settings">Settings</string>
+    <string name="blank"><![CDATA[<string name=\"blank\" translatable=\"false\">Note that you have to invoke attachBaseContext in the other components like Service to update the resources for them as well. Another pitfall of using createConfigurationContext is that you can’t actually update the resources for Application after you change the language at runtime since attachBaseContext is never called again. Therefore, you have to restart the application to update the resources.Note that you have to invoke attachBaseContext in the other components like Service to update the resources for them as well. Another pitfall of using createConfigurationContext is that you can’t actually update the resources for Application after you change the language at runtime since attachBaseContext is never called again. Therefore, you have to restart the application to update the resources.Note that you have to invoke attachBaseContext in the other components like Service to update the resources for them as well. Another pitfall of using createConfigurationContext is that you can’t actually update the resources for Application after you change the language at runtime since attachBaseContext is never called again. Therefore, you have to restart the application to update the resources.Note that you have to invoke attachBaseContext in the other components like Service to update the resources for them as well. Another pitfall of using createConfigurationContext is that you can’t actually update the resources for Application after you change the language at runtime since attachBaseContext is never called again. Therefore, you have to restart the application to update the resources.Note that you have to invoke attachBaseContext in the other components like Service to update the resources for them as well. Another pitfall of using createConfigurationContext is that you can’t actually update the resources for Application after you change the language at runtime since attachBaseContext is never called again. Therefore, you have to restart the application to update the resources.Note that you have to invoke attachBaseContext in the other components like Service to update the resources for them as well. Another pitfall of using createConfigurationContext is that you can’t actually update the resources for Application after you change the language at runtime since attachBaseContext is never called again. Therefore, you have to restart the application to update the resources.Note that you have to invoke attachBaseContext in the other components like Service to update the resources for them as well. Another pitfall of using createConfigurationContext is that you can’t actually update the resources for Application after you change the language at runtime since attachBaseContext is never called again. Therefore, you have to restart the application to update the resources.Note that you have to invoke attachBaseContext in the other components like Service to update the resources for them as well. Another pitfall of using createConfigurationContext is that you can’t actually update the resources for Application after you change the language at runtime since attachBaseContext is never called again. Therefore, you have to restart the application to update the resources.Note that you have to invoke attachBaseContext in the other components like Service to update the resources for them as well. Another pitfall of using createConfigurationContext is that you can’t actually update the resources for Application after you change the language at runtime since attachBaseContext is never called again. Therefore, you have to restart the application to update the resources.Note that you have to invoke attachBaseContext in the other components like Service to update the resources for them as well. Another pitfall of using createConfigurationContext is that you can’t actually update the resources for Application after you change the language at runtime since attachBaseContext is never called again. Therefore, you have to restart the application to update the resources.Note that you have to invoke attachBaseContext in the other components like Service to update the resources for them as well. Another pitfall of using createConfigurationContext is that you can’t actually update the resources for Application after you change the language at runtime since attachBaseContext is never called again. Therefore, you have to restart the application to update the resources.Note that you have to invoke attachBaseContext in the other components like Service to update the resources for them as well. Another pitfall of using createConfigurationContext is that you can’t actually update the resources for Application after you change the language at runtime since attachBaseContext is never called again. Therefore, you have to restart the application to update the resources.Note that you have to invoke attachBaseContext in the other components like Service to update the resources for them as well. Another pitfall of using createConfigurationContext is that you can’t actually update the resources for Application after you change the language at runtime since attachBaseContext is never called again. Therefore, you have to restart the application to update the resources.Note that you have to invoke attachBaseContext in the other components like Service to update the resources for them as well. Another pitfall of using createConfigurationContext is that you can’t actually update the resources for Application after you change the language at runtime since attachBaseContext is never called again. Therefore, you have to restart the application to update the resources.Note that you have to invoke attachBaseContext in the other components like Service to update the resources for them as well. Another pitfall of using createConfigurationContext is that you can’t actually update the resources for Application after you change the language at runtime since attachBaseContext is never called again. Therefore, you have to restart the application to update the resources.Note that you have to invoke attachBaseContext in the other components like Service to update the resources for them as well. Another pitfall of using createConfigurationContext is that you can’t actually update the resources for Application after you change the language at runtime since attachBaseContext is never called again. Therefore, you have to restart the application to update the resources.Note that you have to invoke attachBaseContext in the other components like Service to update the resources for them as well. Another pitfall of using createConfigurationContext is that you can’t actually update the resources for Application after you change the language at runtime since attachBaseContext is never called again. Therefore, you have to restart the application to update the resources.Note that you have to invoke attachBaseContext in the other components like Service to update the resources for them as well. Another pitfall of using createConfigurationContext is that you can’t actually update the resources for Application after you change the language at runtime since attachBaseContext is never called again. Therefore, you have to restart the application to update the resources.Note that you have to invoke attachBaseContext in the other components like Service to update the resources for them as well. Another pitfall of using createConfigurationContext is that you can’t actually update the resources for Application after you change the language at runtime since attachBaseContext is never called again. Therefore, you have to restart the application to update the resources.Note that you have to invoke attachBaseContext in the other components like Service to update the resources for them as well. Another pitfall of using createConfigurationContext is that you can’t actually update the resources for Application after you change the language at runtime since attachBaseContext is never called again. Therefore, you have to restart the application to update the resources.Note that you have to invoke attachBaseContext in the other components like Service to update the resources for them as well. Another pitfall of using createConfigurationContext is that you can’t actually update the resources for Application after you change the language at runtime since attachBaseContext is never called again. Therefore, you have to restart the application to update the resources.Note that you have to invoke attachBaseContext in the other components like Service to update the resources for them as well. Another pitfall of using createConfigurationContext is that you can’t actually update the resources for Application after you change the language at runtime since attachBaseContext is never called again. Therefore, you have to restart the application to update the resources.Note that you have to invoke attachBaseContext in the other components like Service to update the resources for them as well. Another pitfall of using createConfigurationContext is that you can’t actually update the resources for Application after you change the language at runtime since attachBaseContext is never called again. Therefore, you have to restart the application to update the resources.Note that you have to invoke attachBaseContext in the other components like Service to update the resources for them as well. Another pitfall of using createConfigurationContext is that you can’t actually update the resources for Application after you change the language at runtime since attachBaseContext is never called again. Therefore, you have to restart the application to update the resources.Note that you have to invoke attachBaseContext in the other components like Service to update the resources for them as well. Another pitfall of using createConfigurationContext is that you can’t actually update the resources for Application after you change the language at runtime since attachBaseContext is never called again. Therefore, you have to restart the application to update the resources.Note that you have to invoke attachBaseContext in the other components like Service to update the resources for them as well. Another pitfall of using createConfigurationContext is that you can’t actually update the resources for Application after you change the language at runtime since attachBaseContext is never called again. Therefore, you have to restart the application to update the resources.Note that you have to invoke attachBaseContext in the other components like Service to update the resources for them as well. Another pitfall of using createConfigurationContext is that you can’t actually update the resources for Application after you change the language at runtime since attachBaseContext is never called again. Therefore, you have to restart the application to update the resources.Note that you have to invoke attachBaseContext in the other components like Service to update the resources for them as well. Another pitfall of using createConfigurationContext is that you can’t actually update the resources for Application after you change the language at runtime since attachBaseContext is never called again. Therefore, you have to restart the application to update the resources.Note that you have to invoke attachBaseContext in the other components like Service to update the resources for them as well. Another pitfall of using createConfigurationContext is that you can’t actually update the resources for Application after you change the language at runtime since attachBaseContext is never called again. Therefore, you have to restart the application to update the resources.Note that you have to invoke attachBaseContext in the other components like Service to update the resources for them as well. Another pitfall of using createConfigurationContext is that you can’t actually update the resources for Application after you change the language at runtime since attachBaseContext is never called again. Therefore, you have to restart the application to update the resources.Note that you have to invoke attachBaseContext in the other components like Service to update the resources for them as well. Another pitfall of using createConfigurationContext is that you can’t actually update the resources for Application after you change the language at runtime since attachBaseContext is never called again. Therefore, you have to restart the application to update the resources.Note that you have to invoke attachBaseContext in the other components like Service to update the resources for them as well. Another pitfall of using createConfigurationContext is that you can’t actually update the resources for Application after you change the language at runtime since attachBaseContext is never called again. Therefore, you have to restart the application to update the resources.</string>]]></string>
+    <string name="lblNo">No.</string>
+    <string name="lblDate">Date</string>
+    <string name="lblSelectPaymentType">Select Payment Type</string>
+    <string name="lblSelectBookingCity">Select Booking City</string>
+    <string name="lblSelectBookingPostCode">Select Booking Post Code</string>
+    <string name="lblSelectDestinationCounty">Select Destination County</string>
+    <string name="lblSelectDestinationCity">Select Destination City</string>
+    <string name="lblSelectDestinationPostCode">Select Destination Post Code</string>
+    <string name="lblPostcodeType">Postcode Type</string>
+    <string name="lblSelectConsignor">Select Consignor</string>
+    <string name="lblAddress">Address</string>
+    <string name="lblPostcode">Postcode</string>
+    <string name="lblMobileNo">Mobile No</string>
+    <string name="lblVATNo">VAT No</string>
+    <string name="lblConsignee">Consignee</string>
+    <string name="lblSelectVerticle">Select Vertical Type</string>
+    <string name="lblProductName">Product Name</string>
+    <string name="lblSelectPackingType">Select Packing Type</string>
+    <string name="lblNoofBoxes">No. of Boxes</string>
+    <string name="lblBoxes">Boxes</string>
+    <string name="lblLength">Length</string>
+    <string name="lblWidth">Width</string>
+    <string name="lblHeight">Height</string>
+    <string name="lblActualWeight">Actual Weight</string>
+    <string name="lblActualWeightPerBox">Actual Weight Per Box</string>
+    <string name="lblVolumetricWeight">Volumetric Weight</string>
+    <string name="lblSelectBookingCountry">Select Booking County</string>
+
+    <!-- validation strings -->
+    <string name="val_msg_mandatory_fields">This is mandatory field</string>
+    <string name="val_msg_enter_username">Please enter username</string>
+    <string name="val_msg_enter_password">Please enter password</string>
+    <string name="lblNetPayable">Net Payable</string>
+    <string name="lblFromDate">From Date</string>
+    <string name="lblToDate">To Date</string>
+    <string name="ProductDetail">Product Detail</string>
+    <string name="lblQty">Qty</string>
+    <string name="lblAmount">Amount</string>
+
+    <!--region By Jigar-->
+    <string name="title_docket_details">Docket Details</string>
+    <string name="title_consignor_details">Consignor Information</string>
+    <string name="title_consignee_details">Consignee Information</string>
+    <string name="title_product_details">Product Information</string>
+    <string name="title_dimension_details">Dimension Details</string>
+
+    <!-- docket booking tab title -->
+    <string name="tab_title_docket_booking_details">Booking Details</string>
+    <string name="tab_title_docket_charges_details">Charges Details</string>
+    <string name="lblSelectDispatchMode">Select Dispatch Mode</string>
+    <string name="lblSelectOrigin">Select Origin</string>
+    <string name="lblSelectDestinationState">Select Destination State</string>
+    <string name="lblSelectDestination">Select Destination</string>
+    <!--endregion-->
+
+    <!--Dashboard title start-->
+    <string name="pick_up_request">Pick Up Request</string>
+    <string name="docket_booking">Docket Booking</string>
+    <string name="total_billing">Total Billing</string>
+    <string name="total_outstanding">Total Outstanding</string>
+    <!--Dashboard title end-->
+
+    <string name="OTP_message">OTP has been sent on your Registered Mobile Number</string>
+
+</resources>

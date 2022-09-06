@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:background="@color/colorPrimary"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:id="@+id/toolbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:animateLayoutChanges="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/size_40dp"
+                android:layout_height="@dimen/size_40dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:contentDescription="@string/image_description"
+                android:focusable="true"
+                android:padding="@dimen/size_8dp"
+                android:src="@drawable/ic_back"
+                android:tint="@color/colorWhite"
+                tools:targetApi="lollipop" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_header_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/size_8dp"
+                android:layout_toEndOf="@+id/iv_back"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textAppearance="@style/TextStyleSemiBold"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_18sp"
+                tools:text="@string/app_name" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_Search"
+                android:layout_width="@dimen/size_40dp"
+                android:layout_height="@dimen/size_40dp"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/iv_Filter"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:contentDescription="@string/image_description"
+                android:focusable="true"
+                android:padding="@dimen/size_8dp"
+                android:src="@drawable/ic_search"
+                android:tint="@color/colorWhite"
+                android:visibility="gone"
+                tools:targetApi="lollipop" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_Filter"
+                android:layout_width="@dimen/size_40dp"
+                android:layout_height="@dimen/size_40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:contentDescription="@string/image_description"
+                android:focusable="true"
+                android:padding="@dimen/size_8dp"
+                android:src="@drawable/filter"
+                android:tint="@color/colorWhite"
+                android:visibility="gone"
+                tools:targetApi="lollipop" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSave"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="@dimen/size_70dp"
+                android:layout_height="@dimen/size_32dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/size_4dp"
+                android:layout_marginEnd="@dimen/size_6dp"
+                android:layout_marginBottom="@dimen/size_4dp"
+                android:backgroundTint="#69DA69"
+                android:insetLeft="@dimen/size_0dp"
+                android:insetTop="@dimen/size_0dp"
+                android:insetRight="@dimen/size_0dp"
+                android:insetBottom="@dimen/size_0dp"
+                android:padding="@dimen/size_2dp"
+                android:text="Save"
+                android:textSize="@dimen/text_14sp"
+                android:visibility="gone"
+                app:cornerRadius="@dimen/size_8dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/search_layout"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:animateLayoutChanges="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:padding="@dimen/size_4dp"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtSearch"
+                style="@style/TextInputEditLayoutAppearance"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-2dp"
+                android:layout_marginBottom="-2dp"
+                android:background="@drawable/bg_search"
+                android:drawableStart="@drawable/ic_search"
+                android:drawablePadding="@dimen/size_8dp"
+                android:drawableTint="@color/colorTextDark"
+                android:hint="Search..."
+                android:inputType="textPersonName"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorBlack"
+                android:theme="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                tools:ignore="HardcodedText,UnusedAttribute"
+                tools:text="Search..." />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivClearEditext"
+                android:layout_width="@dimen/size_40dp"
+                android:layout_height="@dimen/size_40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="@dimen/size_4dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="@dimen/size_6dp"
+                android:src="@drawable/ic_close"
+                android:tint="@color/colorTextDark" />
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+</layout>

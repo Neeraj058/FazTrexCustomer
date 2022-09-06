@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.faztrex.customer.models.pickuprequest.PickupRequestDetailModel" />
+
+        <import type="com.faztrex.customer.utils.AppConstants" />
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/rlButtomSheetLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="@dimen/size_0dp"
+        app:cardCornerRadius="@dimen/size_10dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvAddDimensionDetails"
+                style="@style/TextStyleBold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorfzBlue"
+                android:gravity="start"
+                android:padding="@dimen/size_12dp"
+                android:text="@string/dimension_detail"
+                android:textColor="@color/colorWhite" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivclose"
+                android:layout_width="@dimen/size_40dp"
+                android:layout_height="@dimen/size_40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="@dimen/size_4dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="@dimen/size_6dp"
+                android:src="@drawable/ic_close"
+                android:tint="@color/colorWhite"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivDetails"
+                android:layout_width="@dimen/size_80dp"
+                android:layout_height="@dimen/size_80dp"
+                android:layout_below="@id/tvAddDimensionDetails"
+                android:layout_marginTop="@dimen/size_18dp"
+                android:padding="@dimen/size_8dp"
+                android:src="@drawable/details" />
+
+            <LinearLayout
+                android:id="@+id/lLayoutDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvAddDimensionDetails"
+                android:layout_toEndOf="@id/ivDetails"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:padding="@dimen/size_4dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvActualWeightTitle"
+                        style="@style/TextStyleBold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Actual Weight"
+                        android:textColor="@color/colorTextDarkGrey"
+                        android:textSize="@dimen/text_14sp"
+                        tools:ignore="HardcodedText,RtlSymmetry" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvActualWeightValue"
+                        style="@style/TextStyleSemiBold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="@{String.valueOf(data.actualWeight)}"
+                        android:textColor="@color/colorTextDarkGrey"
+                        android:textSize="@dimen/text_14sp"
+                        tools:ignore="RtlSymmetry"
+                        tools:text="0.00" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvChargeableWeightTitle"
+                        style="@style/TextStyleBold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/text_10sp"
+                        android:gravity="center"
+                        android:text="Chargeable Weight"
+                        android:textColor="@color/colorTextDarkGrey"
+                        android:textSize="@dimen/text_14sp"
+                        tools:ignore="HardcodedText,RtlSymmetry" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvChargeableValue"
+                        style="@style/TextStyleSemiBold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="@{String.valueOf(data.chargableWeight)}"
+                        android:textColor="@color/colorTextDarkGrey"
+                        android:textSize="@dimen/text_14sp"
+                        tools:ignore="RtlSymmetry"
+                        tools:text="0.00" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvVolumetricWeightTitle"
+                        style="@style/TextStyleBold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Volumetric Weight"
+                        android:textColor="@color/colorTextDarkGrey"
+                        android:textSize="@dimen/text_14sp"
+                        tools:ignore="HardcodedText,RtlSymmetry" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvVolumetricWeightValue"
+                        style="@style/TextStyleSemiBold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="@{String.valueOf(data.volumetricWeight)}"
+                        android:textColor="@color/colorTextDarkGrey"
+                        android:textSize="@dimen/text_14sp"
+                        tools:ignore="RtlSymmetry"
+                        tools:text="0.00" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvChargeWeightTitle"
+                        style="@style/TextStyleBold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/text_10sp"
+                        android:gravity="center"
+                        android:text="Charge Weight (%)"
+                        android:textColor="@color/colorTextDarkGrey"
+                        android:textSize="@dimen/text_14sp"
+                        tools:ignore="HardcodedText,RtlSymmetry" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvChargeWeightValue"
+                        style="@style/TextStyleSemiBold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="@{String.valueOf(data.chargableWeightPer)}"
+                        android:textColor="@color/colorTextDarkGrey"
+                        android:textSize="@dimen/text_14sp"
+                        tools:ignore="RtlSymmetry"
+                        tools:text="0.00" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvBasicChargeAmountTitle"
+                style="@style/TextStyleBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lLayoutDetails"
+                android:layout_toStartOf="@+id/tvBasicChargeAmountValue"
+                android:layout_toEndOf="@+id/ivDetails"
+                android:gravity="end"
+                android:padding="@dimen/size_4dp"
+                android:text="Basic Charge Amount : "
+                android:textColor="@color/colorTextDarkGrey"
+                android:textSize="@dimen/text_14sp"
+                tools:ignore="HardcodedText,RtlSymmetry"
+                tools:text="Basic Charge Amount : " />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvBasicChargeAmountValue"
+                style="@style/TextStyleSemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lLayoutDetails"
+                android:layout_alignParentEnd="true"
+                android:gravity="center"
+                android:padding="@dimen/size_4dp"
+                android:singleLine="true"
+                android:text="@{String.valueOf(data.basicChargeAmount)}"
+                android:textColor="@color/colorTextDarkGrey"
+                android:textSize="@dimen/text_14sp"
+                tools:ignore="RtlSymmetry"
+                tools:text="0.00" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

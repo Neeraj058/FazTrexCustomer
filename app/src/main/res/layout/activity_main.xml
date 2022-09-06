@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.faztrex.customer.models.pickuprequest.DimensionDetailModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/size_3dp"
+        android:layout_height="wrap_content">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            app:cardCornerRadius="@dimen/size_10dp"
+            app:cardBackgroundColor="@color/colorAppBackGround"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/rvActions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_2dp"
+                    android:layout_marginBottom="@dimen/size_3dp"
+                    android:padding="@dimen/size_4dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvSrNo"
+                        style="@style/TextStyleBold"
+                        android:layout_width="@dimen/size_30dp"
+                        android:layout_height="@dimen/size_30dp"
+                        android:layout_marginStart="@dimen/size_2dp"
+                        android:background="@drawable/bg_circle"
+                        android:backgroundTint="#C4FAC4"
+                        android:gravity="center"
+                        android:text="@{String.valueOf(data.serialNo)}"
+                        android:textColor="@color/colorPrimary"
+                        tools:ignore="RtlSymmetry"
+                        tools:text="1" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvDelete"
+                        style="@style/TextStyleBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_30dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="?attr/selectableItemBackground"
+                        android:backgroundTint="#C4FAC4"
+                        android:clickable="true"
+                        android:drawableStart="@drawable/ic_twotone_delete"
+                        android:drawableTint="@color/colorThemeRed"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:text="DELETE"
+                        android:paddingEnd="@dimen/size_2dp"
+                        android:textColor="@color/colorThemeRed"
+                        tools:ignore="RtlSymmetry"
+                        tools:targetApi="m"
+                        tools:text="DELETE" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/lLayoutBoxes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rvActions"
+                    android:layout_margin="@dimen/size_5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/size_55dp"
+                        android:layout_marginStart="@dimen/size_2dp"
+                        android:layout_marginEnd="@dimen/size_2dp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="@color/colorItemCardSubItem"
+                        app:cardCornerRadius="@dimen/size_10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvBoxesTitle"
+                                style="@style/TextStyleBold"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/lblBoxes"
+                                android:textColor="@color/colorItemCardTextItem"
+                                android:textSize="@dimen/text_14sp"
+                                tools:ignore="RtlSymmetry"
+                                tools:text="Boxes" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvBoxesValue"
+                                style="@style/TextStyleSemiBold"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="@{String.valueOf(data.boxes)}"
+                                android:textColor="@color/colorItemCardTextItem"
+                                android:textSize="@dimen/text_12sp"
+                                tools:ignore="RtlSymmetry"
+                                tools:text="843.00" />
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/size_55dp"
+                        android:layout_marginStart="@dimen/size_2dp"
+                        android:layout_marginEnd="@dimen/size_2dp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="@color/colorItemCardSubItem"
+                        app:cardCornerRadius="@dimen/size_10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvLengthTitle"
+                                style="@style/TextStyleBold"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/lblLength"
+                                android:textColor="@color/colorItemCardTextItem"
+                                android:textSize="@dimen/text_14sp"
+                                tools:ignore="RtlSymmetry"
+                                tools:text="Length" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvLengthValue"
+                                style="@style/TextStyleSemiBold"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@{String.valueOf(data.length)}"
+                                android:textColor="@color/colorItemCardTextItem"
+                                android:textSize="@dimen/text_12sp"
+                                tools:ignore="RtlSymmetry"
+                                tools:text="843.00" />
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/size_55dp"
+                        android:layout_marginStart="@dimen/size_2dp"
+                        android:layout_marginEnd="@dimen/size_2dp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="@color/colorItemCardSubItem"
+                        app:cardCornerRadius="@dimen/size_10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvWidthTitle"
+                                style="@style/TextStyleBold"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/lblWidth"
+                                android:textColor="@color/colorItemCardTextItem"
+                                android:textSize="@dimen/text_14sp"
+                                tools:ignore="RtlSymmetry"
+                                tools:text="Width" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvWidthValue"
+                                style="@style/TextStyleSemiBold"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@{String.valueOf(data.width)}"
+                                android:textColor="@color/colorItemCardTextItem"
+                                android:textSize="@dimen/text_12sp"
+                                tools:ignore="RtlSymmetry"
+                                tools:text="843.00" />
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/size_55dp"
+                        android:layout_marginStart="@dimen/size_2dp"
+                        android:layout_marginEnd="@dimen/size_2dp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="@color/colorItemCardSubItem"
+                        app:cardCornerRadius="@dimen/size_10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvHeightTitle"
+                                style="@style/TextStyleBold"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/lblHeight"
+                                android:textColor="@color/colorItemCardTextItem"
+                                android:textSize="@dimen/text_14sp"
+                                tools:ignore="RtlSymmetry"
+                                tools:text="Height" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvHeightValue"
+                                style="@style/TextStyleSemiBold"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@{String.valueOf(data.height)}"
+                                android:textColor="@color/colorItemCardTextItem"
+                                android:textSize="@dimen/text_12sp"
+                                tools:ignore="RtlSymmetry"
+                                tools:text="843.00" />
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lLayoutActualweight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lLayoutBoxes"
+                    android:layout_margin="@dimen/size_5dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/size_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvActualWeightTitle"
+                            style="@style/TextStyleBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Actual Weight : "
+                            android:textColor="@color/colorTextDarkGrey"
+                            android:textSize="@dimen/text_14sp"
+                            tools:ignore="RtlSymmetry"
+                            tools:text="Actual Weight : " />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvActualWeightValue"
+                            style="@style/TextStyleSemiBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:singleLine="true"
+                            android:text="@{String.valueOf(data.actualWeight)}"
+                            android:textColor="@color/colorTextDarkGrey"
+                            android:textSize="@dimen/text_14sp"
+                            tools:ignore="RtlSymmetry"
+                            tools:text="0000000000" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="@dimen/size_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/size_5dp"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvVolumetricWeightTitle"
+                            style="@style/TextStyleBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Actual Weight : "
+                            android:textColor="@color/colorTextDarkGrey"
+                            android:textSize="@dimen/text_14sp"
+                            tools:ignore="RtlSymmetry"
+                            tools:text="Volumetric Weight : " />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvVolumetricWeightValue"
+                            style="@style/TextStyleSemiBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:maxLength="10"
+                            android:singleLine="true"
+                            android:text="@{String.valueOf(data.volumetricWeight)}"
+                            android:textColor="@color/colorTextDarkGrey"
+                            android:textSize="@dimen/text_14sp"
+                            tools:ignore="RtlSymmetry"
+                            tools:text="000000000" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lLayoutActualweight"
+                    android:layout_margin="@dimen/size_5dp"
+                    android:layout_marginBottom="@dimen/size_3dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvActualWeightPerBoxTitle"
+                        style="@style/TextStyleBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Actual Weight Per Box : "
+                        android:textColor="@color/colorTextDarkGrey"
+                        android:textSize="@dimen/text_14sp"
+                        tools:ignore="RtlSymmetry"
+                        tools:text="Actual Weight Per Box : " />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvActualWeightPerBoxValue"
+                        style="@style/TextStyleSemiBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/tvActualWeightPerBoxTitle"
+                        android:gravity="start"
+                        android:singleLine="true"
+                        android:text="@{String.valueOf(data.actualWeightPerBox)}"
+                        android:textColor="@color/colorTextDarkGrey"
+                        android:textSize="@dimen/text_14sp"
+                        tools:ignore="RtlSymmetry"
+                        tools:text="0000000000" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </RelativeLayout>
+</layout>

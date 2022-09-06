@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAppBackGround"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:id="@+id/coordinatorLayoutLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:context=".ui.activities.pickuprequest.PickUpRequestListActivity">
+
+
+                <com.google.android.material.appbar.AppBarLayout
+                    android:id="@+id/my_appbar_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                    <com.google.android.material.appbar.CollapsingToolbarLayout
+                        android:id="@+id/technique_one_toolbar"
+                        style="@style/Widget.Design.CollapsingToolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_scrollFlags="scroll|enterAlways">
+
+                        <include
+                            android:id="@+id/toolbar"
+                            layout="@layout/toolbar_main"
+                            android:visibility="visible" />
+                        <!--
+                            scroll
+                            enterAlways
+                            enterAlwaysCollapsed
+                            exitUntilCollapsed
+                        -->
+                    </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+                </com.google.android.material.appbar.AppBarLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                        android:id="@+id/swipe_refresh_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvCommanListLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_no_data_found"
+                        android:layout_width="@dimen/no_data_img"
+                        android:layout_height="@dimen/no_data_img"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/image_description"
+                        android:src="@drawable/ic_no_data"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+
+                <include
+                    android:id="@+id/bottomSheetLayoutRatting"
+                    layout="@layout/item_docket_booking_rating" />
+
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabAdd"
+                style="@style/Widget.MaterialComponents.FloatingActionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/size_10dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:rotation="45"
+                android:src="@drawable/ic_close"
+                app:borderWidth="@dimen/size_0dp"
+                app:elevation="@dimen/size_0dp"
+                app:fabSize="auto"
+                app:tint="@color/colorWhite" />
+
+
+        </RelativeLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/filterNavigationDrawer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:overScrollMode="never"
+            android:scrollIndicators="none"
+            android:scrollbarAlwaysDrawVerticalTrack="false"
+            android:scrollbarFadeDuration="0"
+            android:scrollbars="none"
+            app:headerLayout="@layout/common_filter_layout"
+            app:itemIconTint="@color/colorWhite"
+            app:itemTextAppearance="@color/colorWhite"
+            app:itemTextColor="@color/colorWhite"
+            tools:ignore="UnusedAttribute" />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+</layout>
